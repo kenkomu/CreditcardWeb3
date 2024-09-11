@@ -81,7 +81,7 @@ const Home = () => {
   return (
     <section className="home">
       <div className="home-content">
-      <button onClick={connectWallet}>
+      {/* <button onClick={connectWallet}>
           {account ? `Connected: ${account}` : "Connect Wallet"}
         </button>
 
@@ -95,7 +95,7 @@ const Home = () => {
 
         {isCardActive !== null && (
           <p>Card Active: {isCardActive ? 'Yes' : 'No'}</p>
-        )}
+        )} */}
         <header className="home-header">
           <HeaderBox
             type="greeting"
