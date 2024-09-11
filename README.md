@@ -1,7 +1,6 @@
 # Web3CreditCard
 This Web3 Credit Card Application allows users to spend part of their cryptocurrency portfolio for online shopping without the hassle of converting to fiat or using traditional banking systems. By leveraging blockchain technology, the app provides a seamless and secure way for users to generate a one-time credit card, enabling quick payments while preserving user privacy and transparency.
-![web3creditcard](https://github.com/user-attachments/assets/4a129c62-f4ea-45e6-8f42-02a3c7bc153c)
-
+![alt text](image-1.png)
 
 # Problem Statement
 Traditional online payments for crypto users are cumbersome, requiring the conversion of crypto assets to fiat currency and deposit into a traditional bank card or account. This process is slow, expensive, and inconvenient, leading to a frustrating experience for crypto holders who wish to spend their digital assets directly. Additionally, the lack of transparency and security in existing payment systems raises concerns about data privacy and transaction trust.
