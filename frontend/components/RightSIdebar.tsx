@@ -1,14 +1,78 @@
+"use client"
+import { useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import BankCard from './BankCard'
+import Web3 from 'web3';
+import abi from '@/app/(root)/MyContractAbi.json'; // Import ABI
 
 const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
+
+  const [account, setAccount] = useState<string | null>(null); // Store the connected account
+  const [isCardActive, setIsCardActive] = useState<boolean | null>(null); // Store card status
+
+  const loggedIn = { firstName: 'ken', lastName: 'Komu', email: 'contact@kenkomu.pro' };
+
+  // Instantiate a web3 object by passing the RPC URL of Sepolia.
+  const web3 = new Web3(Web3.givenProvider || 'https://rpc.sepolia-api.lisk.com');
+
+  // Address of the contract
+  const address = '0x539A45407Fd3183088D4C3DEb4662dd2d5e4a7DE';
+
+  // Instantiate the contract object
+  const myContract = new web3.eth.Contract(abi, address);
+
+  // Function to connect wallet (MetaMask)
+  const connectWallet = async () => {
+    if (window.ethereum) {
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        setAccount(accounts[0]);
+        console.log("Connected account: ", accounts[0]);
+      } catch (error) {
+        console.error("Error connecting to MetaMask", error);
+      }
+    } else {
+      console.error("MetaMask not detected");
+    }
+  };
+
+  // Function to interact with contract methods
+  const issueCard = async () => {
+    if (account) {
+      try {
+        const result = await myContract.methods.issueCard('123456789', 30).send({ from: account });
+        console.log("Card issued: ", result);
+      } catch (error) {
+        console.error("Error issuing card: ", error);
+      }
+    } else {
+      console.error("Connect MetaMask first");
+    }
+  };
+
+  const checkCardActive = async () => {
+    if (account) {
+      try {
+        const result = await myContract.methods.isCardActive(account).call();
+        setIsCardActive(result);
+        console.log("Is card active: ", result);
+      } catch (error) {
+        console.error("Error checking card status: ", error);
+      }
+    } else {
+      console.error("Connect MetaMask first");
+    }
+  };
   return (
     <aside className="right-sidebar">
       <section className="flex flex-col pb-8">
+       
         <div className="profile-banner" />
+        
         <div className="profile">
+          
           <div className="profile-img">
             <span className="text-5xl font-bold text-blue-500">{user.firstName[0]}</span>
           </div>
