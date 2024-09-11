@@ -42,6 +42,7 @@ The platform ensures that user data remains secure and private, utilizing decent
   3. Blockchain: Solidity for smart contract development, Ethereum.
   4. Lisk network. The smart contract has been deployed to Lisk Sepolia testnet.
   --Here is the contract [link](https://sepolia-blockscout.lisk.com/address/0x539A45407Fd3183088D4C3DEb4662dd2d5e4a7DE?tab=contract) address for the deployement.
+  ![alt text](image.png)
 
  # Installation
 
