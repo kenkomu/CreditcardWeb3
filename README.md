@@ -4,6 +4,9 @@ This Web3 Credit Card Application allows users to spend part of their cryptocurr
 # Problem Statement
 Traditional online payments for crypto users are cumbersome, requiring the conversion of crypto assets to fiat currency and deposit into a traditional bank card or account. This process is slow, expensive, and inconvenient, leading to a frustrating experience for crypto holders who wish to spend their digital assets directly. Additionally, the lack of transparency and security in existing payment systems raises concerns about data privacy and transaction trust.
 
+# Proposed Solution
+The Web3 Credit Card Application addresses these challenges by building a decentralized payment system on the blockchain. Users can request a virtual credit card, make payments with their chosen cryptocurrency, and use the card details for online shopping, all while maintaining control over their funds and ensuring transaction transparency.
+
 # Objectives
 
 ### Seamless Payment Experience
@@ -18,8 +21,6 @@ Foster a user -friendly and trust platform where user feel confident in utilizin
 ### Transparent Transactions
 Ensure full transparecy in all transactions by utilizing smart contract to handle payments, ensuring the users are awere of every transaction step.  
 
-# Proposed Solution
-The Web3 Credit Card Application addresses these challenges by building a decentralized payment system on the blockchain. Users can request a virtual credit card, make payments with their chosen cryptocurrency, and use the card details for online shopping, all while maintaining control over their funds and ensuring transaction transparency.
 
 # Key Features
 
