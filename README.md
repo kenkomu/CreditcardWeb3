@@ -51,7 +51,7 @@ The platform ensures that user data remains secure and private, utilizing decent
  1. `clone the repository`
   git clone https://github.com/kenkomu/CreditcardWeb3
 
-    `cd web3-credit-card-app`
+    `cd CreditcardWeb3`
 
 
 
